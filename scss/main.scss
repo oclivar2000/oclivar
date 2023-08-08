@@ -1,3 +1,10 @@
+@mixin flex-center($wrap:wrap) {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: $wrap;
+}
+
 /*-------------------Este receteo sirve para todas las páginas HTML----------*/
 * {
     /* Margen y padding en cero */
@@ -19,10 +26,11 @@
   /*-----------Utilizando anidacion en archivo SCSS-------------------------------*/
   .header {
     background-color: aqua;
-    display: flex;
+    @include flex-center();
+   /* display: flex;
     justify-content: space-around;
     align-items: center;
-    flex-wrap: wrap;
+    flex-wrap: wrap;*/
     min-height: 20vh;
   
     a {
@@ -47,10 +55,11 @@
     background-color: rgb(228, 226, 172);
   
     div {
-      display: flex;
+      /*display: flex;
       flex-wrap: wrap;
       align-items: center;
-      align-content: center;
+      align-content: center;*/
+      @include flex-center();
       justify-content: space-evenly;
   
       p {
@@ -63,10 +72,11 @@
   }
   
   .banner-principal {
-    display: flex;
+    @include flex-center();
+   /* display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    align-items: center;
+    align-items: center;*/
   
     p {
       font-weight: bolder;
@@ -102,11 +112,11 @@
     }
   
     div {
-      display: flex;
+      /*display: flex;
       flex-wrap: wrap;
       justify-content: space-around;
-      align-items: center;
-  
+      align-items: center;*/
+      @include flex-center();
       p {
         width: 350px;
         font-weight: bolder;

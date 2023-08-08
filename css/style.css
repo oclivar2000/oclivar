@@ -21,6 +21,10 @@
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
+  /* display: flex;
+   justify-content: space-around;
+   align-items: center;
+   flex-wrap: wrap;*/
   min-height: 20vh;
 }
 .header a img {
@@ -38,10 +42,14 @@
   background-color: rgb(228, 226, 172);
 }
 #main-index div {
-  display: flex;
+  /*display: flex;
   flex-wrap: wrap;
   align-items: center;
-  align-content: center;
+  align-content: center;*/
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
   justify-content: space-evenly;
 }
 #main-index div p {
@@ -53,9 +61,13 @@
 
 .banner-principal {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
+  flex-wrap: wrap;
+  /* display: flex;
+   flex-wrap: wrap;
+   justify-content: space-around;
+   align-items: center;*/
 }
 .banner-principal p {
   font-weight: bolder;
@@ -88,10 +100,14 @@
   justify-content: space-evenly;
 }
 .banner div {
-  display: flex;
+  /*display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  align-items: center;*/
+  display: flex;
+  justify-content: space-around;
   align-items: center;
+  flex-wrap: wrap;
 }
 .banner div p {
   width: 350px;
