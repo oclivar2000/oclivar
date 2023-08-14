@@ -107,9 +107,23 @@ $image-sizes: (
   flex-direction: column;
 }
 
+/*********************************************************
+**********Pagina Equipo **************************
+*********************************************************/
+
 #equipo {
   background-color: $bg-color-light;
+  .instalaciones{
+    justify-content: space-evenly;
+  }
 }
+
+
+
+/*********************************************************
+**********Fin  pagina Equipo**************************
+*********************************************************/
+
 
 /*********************************************************
 **********Pagina Instalaciones **************************
@@ -125,10 +139,10 @@ $image-sizes: (
   font-weight: bolder;
 }
 
-/*.instalaciones {
-  height: 170px;
+.centrando{
+justify-content: space-evenly;
 }
-*/
+
 .miClaseImagen {
   max-width: 300px;
   height: auto;
@@ -181,11 +195,6 @@ header {
       transform: scale(1.1);
     }
   }
-}
-
-
-.imagen:hover {
-  transform: scale(1.1);
 }
 
 
