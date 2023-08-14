@@ -90,10 +90,32 @@
   background-color: rgb(228, 226, 172);
 }
 
+/*********************************************************
+**********Pagina Instalaciones **************************
+*********************************************************/
 .main-instalaciones {
   background-color: rgb(225, 220, 128);
 }
 
+.brArtificial {
+  padding-top: 40px;
+  width: 350px;
+  font-weight: bolder;
+}
+
+/*.instalaciones {
+  height: 170px;
+}
+*/
+.miClaseImagen {
+  max-width: 300px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+/*************************************************
+********Fin Instalaciones************************
+************************************************/
 .falso-body {
   background-color: #e5e5e5;
   min-height: 100vh;
