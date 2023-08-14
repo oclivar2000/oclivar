@@ -27,6 +27,9 @@
 
 #main-index {
   background-color: rgb(228, 226, 172);
+  /* .banner-principal, .banner {
+     @include flex-center();
+   }*/
 }
 #main-index div {
   display: flex;
@@ -39,44 +42,35 @@
   padding-bottom: 30px;
   font-weight: bolder;
 }
-#main-index .banner-principal, #main-index .banner {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-}
 
-.banner-principal p {
+.banner p {
   font-weight: bolder;
   width: 780px;
 }
-.banner-principal img {
-  width: 550px;
-}
-
-.banner h2 {
-  padding: 10px;
-  padding-bottom: 30px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: space-evenly;
-}
-.banner div {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-}
-.banner p {
-  width: 350px;
-  font-weight: bolder;
-}
 .banner img {
-  padding-bottom: 30px;
   width: 550px;
 }
 
+/*.banner {
+  h2 {
+    padding: 10px;
+    padding-bottom: 30px;
+    @include flex-center(space-evenly);
+  }
+  div {
+    @include flex-center();
+    p {
+      width: 350px;
+      font-weight: bolder;
+    }
+    img {
+      align-items: center;
+     // padding-bottom: 30px;
+     // padding-left: 30px;
+      padding: 20px;
+      width: 550px;
+    }
+  }*/
 #main-contacto {
   background-color: rgb(225, 220, 128);
   display: flex;

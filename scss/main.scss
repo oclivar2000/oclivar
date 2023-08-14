@@ -67,12 +67,12 @@ $image-sizes: (
     }
   }
 
-  .banner-principal, .banner {
+ /* .banner-principal, .banner {
     @include flex-center();
-  }
+  }*/
 }
 
-.banner-principal {
+.banner {
   p {
     font-weight: bolder;
     width: 780px;
@@ -82,7 +82,7 @@ $image-sizes: (
   }
 }
 
-.banner {
+/*.banner {
   h2 {
     padding: 10px;
     padding-bottom: 30px;
@@ -90,16 +90,19 @@ $image-sizes: (
   }
   div {
     @include flex-center();
-  }
-  p {
-    width: 350px;
-    font-weight: bolder;
-  }
-  img {
-    padding-bottom: 30px;
-    width: 550px;
-  }
-}
+    p {
+      width: 350px;
+      font-weight: bolder;
+    }
+    img {
+      align-items: center;
+     // padding-bottom: 30px;
+     // padding-left: 30px;
+      padding: 20px;
+      width: 550px;
+    }
+  }*/
+
 
 #main-contacto {
   background-color: $bg-color-dark;
