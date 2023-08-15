@@ -1,4 +1,9 @@
+/*********************************************************
+**********Inicializacion de variables **************************
+*********************************************************/
+
 $font-default: Arial, Helvetica, sans-serif;
+$font-default2: 'Times New Roman', Times, serif;
 $base-font-size: 20px;
 $primary-bg-color: aqua;
 $bg-color-light: rgb(228, 226, 172);
@@ -16,6 +21,10 @@ $image-sizes: (
   imagen9: "https://cdn.pixabay.com/photo/2016/02/18/18/37/puppy-1207816_640.jpg"
 );
 
+
+/*********************************************************
+**********Funcion Mixin **************************
+*********************************************************/
 @mixin flex-center($wrap: wrap) {
   display: flex;
   justify-content: space-around;
@@ -23,6 +32,10 @@ $image-sizes: (
   flex-wrap: $wrap;
 }
 
+
+/*********************************************************
+**********Reseteo **************************
+*********************************************************/
 * {
   margin: 0;
   padding: 0;
@@ -31,6 +44,10 @@ $image-sizes: (
   text-decoration: none;
   list-style-type: none;
 }
+
+/*************************************************
+********Encabezado************************
+************************************************/
 
 .header {
   background-color: $primary-bg-color;
@@ -54,35 +71,59 @@ $image-sizes: (
   }
 }
 
+/*************************************************
+********Pagina index.html************************
+************************************************/
+
 #main-index {
   background-color: $bg-color-light;
 
-  div {
-    @include flex-center(space-evenly);
+  section {
+    article {
+      .tipoLetra {
+        font-family: $font-default2;
+      }
 
-    p {
-      width: 680px;
-      padding-bottom: 30px;
-      font-weight: bolder;
+      div {
+        @include flex-center(space-evenly);
+
+        .imagen {
+          width: 50px;
+          height: 50px;
+        }
+
+        p {
+          width: 680px;
+          padding-bottom: 30px;
+          font-weight: bolder;
+        }
+      }
     }
   }
-
- /* .banner-principal, .banner {
-    @include flex-center();
-  }*/
 }
 
-.banner {
+/* .banner-principal, .banner {
+    @include flex-center();
+  }*/
+
+
+/*.banner {
+  .tipoLetra {
+    font-family: $font-default2;
+  }
+
   p {
     font-weight: bolder;
     width: 780px;
   }
+
   img {
     width: 550px;
   }
-}
+}*/
 
-/*.banner {
+
+/* .banner {
   h2 {
     padding: 10px;
     padding-bottom: 30px;
@@ -116,8 +157,11 @@ $image-sizes: (
 
 #equipo {
   background-color: $bg-color-light;
-  .instalaciones{
-    justify-content: space-evenly;
+
+  div {
+    .instalaciones {
+      justify-content: space-evenly;
+    }
   }
 }
 
@@ -132,27 +176,51 @@ $image-sizes: (
 **********Pagina Instalaciones **************************
 *********************************************************/
 
-.main-instalaciones {
-  background-color: rgb(225, 220, 128);
+#main-instalaciones {
+  background-color: $bg-color-light;
+
+  div {
+    div {
+      .miClaseImagen {
+        max-width: 600px;
+        height: 400px;
+        margin-bottom: 20px;
+      }
+
+      .brArtificial {
+        padding-top: 40px;
+        width: 400px;
+        height: 400px;
+        font-weight: bolder;
+      }
+    }
+  }
 }
 
-.brArtificial {
+/*.brArtificial {
   padding-top: 40px;
-  width: 350px;
+  width: 400px;
+  height: 400px;
   font-weight: bolder;
 }
 
-.centrando{
-justify-content: space-evenly;
+.centrando {
+  justify-content: space-evenly;
 }
 
 .miClaseImagen {
-  max-width: 300px;
-  height: auto;
+  max-width: 600px;
+  height: 400px;
   margin-bottom: 20px;
-}
+}*/
+
 /*************************************************
 ********Fin Instalaciones************************
+************************************************/
+
+
+/*************************************************
+***********galeria***********************
 ************************************************/
 .falso-body {
   background-color: #e5e5e5;
@@ -184,7 +252,8 @@ header {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.319);
 }
 
-@each $img, $url in $image-sizes {
+@each $img,
+$url in $image-sizes {
   .#{$img} {
     display: block;
     background-image: url($url);
@@ -193,8 +262,9 @@ header {
     background-position: center;
     width: 200px;
     height: 200px;
+
     &:hover {
-      opacity: 0.8; 
+      opacity: 0.8;
       transform: scale(1.1);
     }
   }
@@ -216,6 +286,9 @@ header {
   }
 }
 
+/*************************************************
+********footer************************
+************************************************/
 .footer {
   min-height: $footer-height;
   background-color: $primary-bg-color;
