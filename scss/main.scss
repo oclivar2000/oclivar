@@ -4,7 +4,7 @@
 
 $font-default: Arial, Helvetica, sans-serif;
 $font-default2: 'Times New Roman', Times, serif;
-$base-font-size: 16px;
+$base-font-size: 18px;
 $primary-bg-color: aqua;
 $bg-color-light: rgb(228, 226, 172);
 $bg-color-dark: rgb(225, 220, 128);
@@ -51,7 +51,7 @@ $image-sizes: (
 
 .header {
   background-color: $primary-bg-color;
-  @include flex-center();
+  @include flex-center(wrap);
 
   min-height: 20vh;
 
@@ -80,24 +80,33 @@ $image-sizes: (
 
   section {
     article {
-      .tipoLetra {
-        font-family: $font-default2;
-      }
-
       div {
-        @include flex-center(space-evenly);
-
-        .imagen {
-          width: 50px;
-          height: 50px;
+        @include flex-center(wrap);
+        .miClaseImagen {
+          width: 350px;
+          height: 350px;
         }
-
         p {
           width: 680px;
           padding-bottom: 30px;
           font-weight: bolder;
         }
       }
+
+      // div {
+      //   @include flex-center(wrap);
+
+      //   .imagen {
+      //     width: 350px;
+      //     height: 350px;
+      //   }
+
+      //   p {
+      //     width: 680px;
+      //     padding-bottom: 30px;
+      //     font-weight: bolder;
+      //   }
+      // }
     }
   }
 }
