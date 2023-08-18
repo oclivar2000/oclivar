@@ -1,12 +1,24 @@
+/*********************************************************
+**********Inicializacion de variables **************************
+*********************************************************/
+/*********************************************************
+**********Funcion Mixin **************************
+*********************************************************/
+/*********************************************************
+**********Reseteo **************************
+*********************************************************/
 * {
   margin: 0;
   padding: 0;
-  font-size: 20px;
+  font-size: 16px;
   font-family: Arial, Helvetica, sans-serif;
   text-decoration: none;
   list-style-type: none;
 }
 
+/*************************************************
+********Encabezado************************
+************************************************/
 .header {
   background-color: aqua;
   display: flex;
@@ -25,33 +37,49 @@
   justify-content: space-between;
 }
 
+/*************************************************
+********Pagina index.html************************
+************************************************/
 #main-index {
   background-color: rgb(228, 226, 172);
-  /* .banner-principal, .banner {
-     @include flex-center();
-   }*/
 }
-#main-index div {
+#main-index section article .tipoLetra {
+  font-family: "Times New Roman", Times, serif;
+}
+#main-index section article div {
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-wrap: space-evenly;
 }
-#main-index div p {
+#main-index section article div .imagen {
+  width: 50px;
+  height: 50px;
+}
+#main-index section article div p {
   width: 680px;
   padding-bottom: 30px;
   font-weight: bolder;
 }
 
-.banner p {
-  font-weight: bolder;
-  width: 780px;
-}
-.banner img {
-  width: 550px;
-}
-
+/* .banner-principal, .banner {
+    @include flex-center();
+  }*/
 /*.banner {
+  .tipoLetra {
+    font-family: $font-default2;
+  }
+
+  p {
+    font-weight: bolder;
+    width: 780px;
+  }
+
+  img {
+    width: 550px;
+  }
+}*/
+/* .banner {
   h2 {
     padding: 10px;
     padding-bottom: 30px;
@@ -86,7 +114,7 @@
 #equipo {
   background-color: rgb(228, 226, 172);
 }
-#equipo .instalaciones {
+#equipo div .instalaciones {
   justify-content: space-evenly;
 }
 
@@ -96,13 +124,25 @@
 /*********************************************************
 **********Pagina Instalaciones **************************
 *********************************************************/
-.main-instalaciones {
-  background-color: rgb(225, 220, 128);
+#main-instalaciones {
+  background-color: rgb(228, 226, 172);
+}
+#main-instalaciones div div .miClaseImagen {
+  max-width: 600px;
+  height: 400px;
+  margin-bottom: 20px;
+}
+#main-instalaciones div div .brArtificial {
+  padding-top: 40px;
+  width: 400px;
+  height: 400px;
+  font-weight: bolder;
 }
 
-.brArtificial {
+/*.brArtificial {
   padding-top: 40px;
-  width: 350px;
+  width: 400px;
+  height: 400px;
   font-weight: bolder;
 }
 
@@ -111,13 +151,15 @@
 }
 
 .miClaseImagen {
-  max-width: 300px;
-  height: auto;
+  max-width: 600px;
+  height: 400px;
   margin-bottom: 20px;
-}
-
+}*/
 /*************************************************
 ********Fin Instalaciones************************
+************************************************/
+/*************************************************
+***********galeria***********************
 ************************************************/
 .falso-body {
   background-color: #e5e5e5;
@@ -279,6 +321,9 @@ header h1 {
     grid-template-areas: "imagen1 imagen2" "imagen3 imagen4" "imagen5 imagen6" "imagen7 imagen8" "imagen9 imagen9";
   }
 }
+/*************************************************
+********footer************************
+************************************************/
 .footer {
   min-height: 10vh;
   background-color: aqua;
