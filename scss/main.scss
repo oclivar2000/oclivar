@@ -159,6 +159,7 @@ $image-sizes: (
 
 #main-contacto {
   background-color: $bg-color-dark;
+  
 
   .text-center {
     text-align: center;
@@ -264,18 +265,20 @@ $image-sizes: (
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.319);
 }
 
-@each $img, $url in $image-sizes {
+@each $img,
+$url in $image-sizes {
   .#{$img} {
     background-image: url($url);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    width: 100%;  
-    height: 200px; 
+    width: 100%;
+    height: 200px;
+
     &:hover {
       opacity: 0.8;
       transform: scale(1.05);
-          transition: transform 0.3s, opacity 0.3s;
+      transition: transform 0.3s, opacity 0.3s;
     }
   }
 }
@@ -291,27 +294,66 @@ $image-sizes: (
 /*************************************************
 ********footer************************
 ************************************************/
-.footer {
-  min-height: $footer-height;
+// .footer {
+//   min-height: $footer-height;
+//   background-color: $primary-bg-color;
+//   align-items: center;
+
+//   div {
+//     padding-bottom: 40px;
+//     @include flex-center();
+//   }
+
+//   ul {
+//     @include flex-center();
+//     min-height: $footer-height;
+
+//     li {
+//       a {
+//         img {
+//           width: 50px;
+//           height: 50px;
+//         }
+//       }
+//     }
+//   }
+// }
+footer {
   background-color: $primary-bg-color;
-  align-items: center;
+  color: black;
+  padding: 20px 10px;
+  // text-decoration: none;
+  //     list-style-type: none;
 
-  div {
-    padding-bottom: 40px;
-    @include flex-center();
-  }
-
-  ul {
-    @include flex-center();
-    min-height: $footer-height;
-
-    li {
+  .col-md-4{
+    h5 {
+      border-bottom: 2px solid #FFF;
+      padding-bottom: 10px;
+      align-items: center;
+    }
+    ul {
+      list-style-type: none;
+      display: flex;
+      flex-direction: row;
       a {
+        padding-right: 15px;
+        padding-left: 15px;
+        text-decoration: none;
         img {
-          width: 50px;
-          height: 50px;
+          width: 80px;
+          height: 80px;
+          padding-right: 15px;
+          padding-left: 15px;
         }
       }
     }
+  }
+  &:hover {
+    // text-decoration: underline;
+    background-color: black;
+    color: white;
+    opacity: 0.8;
+    transform: scale(1.05);
+    transition: transform 0.3s, opacity 0.3s;
   }
 }
