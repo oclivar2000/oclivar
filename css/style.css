@@ -96,26 +96,32 @@
       width: 550px;
     }
   }*/
+/*************************************************
+********Pagina contactenos.html************************
+************************************************/
 #main-contacto {
-  background-color: rgb(225, 220, 128);
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-  flex-direction: column;
+  background-color: #2c3e50;
+  padding: 20px 0;
 }
-#main-contacto .text-center {
-  text-align: center;
-}
-#main-contacto .salto-linea {
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-#main-contacto div h1 {
-  font-family: "Times New Roman", Times, serif;
+#main-contacto h1 {
+  font-family: "Arial", sans-serif;
   font-size: 50px;
+  text-align: center;
+  margin: 0 0 20px;
+}
+#main-contacto form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+@media (max-width: 768px) {
+  #main-contacto form {
+    padding: 0 15px;
+  }
 }
 
+/*************************************************
+******Fin de pagina contactenos.html************************
+************************************************/
 /*********************************************************
 **********Pagina Equipo **************************
 *********************************************************/
@@ -134,16 +140,20 @@
 *********************************************************/
 #main-instalaciones {
   background-color: rgb(228, 226, 172);
+  padding: 20px 0;
 }
-#main-instalaciones div div .miClaseImagen {
-  max-width: 600px;
+#main-instalaciones .miClaseImagen {
   height: 400px;
-  margin-bottom: 20px;
+  width: 500px;
+  display: block;
+  margin: 0 auto;
+  object-fit: cover;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
-#main-instalaciones div div .brArtificial {
+#main-instalaciones .brArtificial {
   padding-top: 40px;
-  width: 400px;
-  height: 400px;
+  max-width: 100%;
   font-weight: bolder;
 }
 

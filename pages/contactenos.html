@@ -31,18 +31,21 @@
         <div class="text-center  salto-linea">
             <h1 tipo-letra>LLenar informacion de contacto</h1>
         </div>
-        <form action="#" method="get">
-            <ul class="centrado">
-                <li><input type="text" name="Nombre" placeholder="Nombre completo"></li>
-
-                <li><input type="tel" name="telefono" placeholder="(011) 1567895425"></li>
-
-                <li><textarea name="textarea" rows="10" cols="50" placeholder="Información adicional"></textarea></li>
-
-                <li><input type="submit" value="Enviar Datos"></li>
-            </ul>
+        <form action="#" method="get" class="row g-3"> <!-- Añadido 'row g-3' para utilizar el sistema de grilla y dar un pequeño espacio entre los campos -->
+            <div class="col-12">
+                <input type="text" class="form-control" name="Nombre" placeholder="Nombre completo"> <!-- Añadido 'form-control' para darle estilo de Bootstrap -->
+            </div>
+            <div class="col-12">
+                <input type="tel" class="form-control" name="telefono" placeholder="(011) 1567895425">
+            </div>
+            <div class="col-12">
+                <textarea class="form-control" name="textarea" rows="4" placeholder="Información adicional"></textarea> <!-- Cambiado 'rows' a 4 -->
+            </div>
+            <div class="col-12">
+                <input type="submit" class="btn btn-primary" value="Enviar Datos"> <!-- Añadido 'btn btn-primary' para darle estilo de botón de Bootstrap -->
+            </div>
         </form>
-        <img src="../img/varios-gatos.jpg" alt="Varios gatos">
+        
     </main>
     <footer>
         <div class="container">
@@ -64,14 +67,14 @@
                     <h5 class="text-center">Compromisos</h5>
                     <ul>
                         <li><a href="#">Adopción de mascotas</a></li>
-                        <li><a href="#">Apoyo en desastres naturales</a></li>
+                        <li><a href="#">Apoyo en desastres</a></li>
                     </ul>
                 </div>
                 <div class="col-12 col-sm-6 col-md-4 col-xl-3 tamano-imagen">
                     <h5 class="text-center">Contacto</h5>
                     <ul>
                         <li><a href="#">Correo: c1@contacto.com</a></li>
-                        <li><a href="#">Teléfono: 1234567</a></li>
+                        <li><a href="#">Teléfono: 123456789</a></li>
                     </ul>
                 </div>
             </div>

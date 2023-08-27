@@ -157,29 +157,38 @@ $image-sizes: (
   }*/
 
 
-#main-contacto {
-  background-color: $bg-color-dark;
+  /*************************************************
+********Pagina contactenos.html************************
+************************************************/
+
+  $bg-color-dark: #2c3e50; // Asumiendo un valor para la variable que no fue proporcionado.
+  $font-default2: 'Arial', sans-serif; // Asumiendo un valor para la variable que no fue proporcionado.
   
-
-  .text-center {
-    text-align: center;
-  }
-
-  .salto-linea {
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
-
-  div {
+  #main-contacto {
+    background-color: $bg-color-dark;
+    padding: 20px 0; // Añadido padding para dar espacio en la parte superior e inferior
+    
     h1 {
       font-family: $font-default2;
       font-size: 50px;
+      text-align: center;
+      margin: 0 0 20px; // Añadido margen para separar del formulario
+    }
+  
+    form {
+      max-width: 600px; // Limitando el ancho máximo del formulario
+      margin: 0 auto; // Centrando el formulario
+  
+      @media (max-width: 768px) {
+        padding: 0 15px; // Añadiendo un poco de padding en dispositivos pequeños para no pegar al borde
+      }
     }
   }
+  
+/*************************************************
+******Fin de pagina contactenos.html************************
+************************************************/
 
-  @include flex-center(wrap);
-  flex-direction: column;
-}
 
 /*********************************************************
 **********Pagina Equipo **************************
@@ -208,24 +217,26 @@ $image-sizes: (
 
 #main-instalaciones {
   background-color: $bg-color-light;
+  padding: 20px 0; // Dar espacio arriba y abajo
 
-  div {
-    div {
-      .miClaseImagen {
-        max-width: 600px;
-        height: 400px;
-        margin-bottom: 20px;
-      }
+  .miClaseImagen {
+    height: 400px;
+    width: 500px; 
+    display: block;
+    margin: 0 auto;
+    object-fit: cover; 
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
 
-      .brArtificial {
-        padding-top: 40px;
-        width: 400px;
-        height: 400px;
-        font-weight: bolder;
-      }
-    }
+
+  .brArtificial {
+    padding-top: 40px;
+    max-width: 100%; 
+    font-weight: bolder;
   }
 }
+
 
 /*.brArtificial {
   padding-top: 40px;
